@@ -15,6 +15,9 @@
   <!-- MENU -->
   <div class="contenedor-header">
     <header>
+      <button id="theme-toggle" aria-label="Cambiar tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
       <div class="logo"><a href="#">Developer</a></div>
       <nav id="nav">
         <ul>
@@ -83,9 +86,9 @@
       </div>
 
       <!-- Botón para descargar CV -->
-      <a href="CV_Yadir.pdf" target="_blank">
-        <button>Descargar CV <span class="overlay"></span></button>
-      </a>
+      <button onclick="window.open('CV_Yadir.pdf', '_blank')">
+        Descargar CV <span class="overlay"></span>
+      </button>
     </div>
   </section>
 
@@ -199,7 +202,21 @@
         </div>
         <div class="col derecha">
           <h3>Experiencia</h3>
+          <div class="item der">
+            <h4>Hackatón Internacional</h4>
+            <span class="casa">Oracle / Alura / No Country</span>
+            <span class="fecha">15 de diciembre 2025 al 27 de enero del 2026</span>
+            <p>
+              Participación activa en el desarrollo de servicios backend y APIs REST para aplicaciones web, implementando
+              lógica de negocio y persistencia de datos mediante JPA/Hibernate, utilizando control de versiones Git bajo
+              flujos de trabajo colaborativos, trabajando en equipos ágiles multidisciplinarios con entregas iterativas,
+              e integrando mecanismos de seguridad básica mediante autenticación y autorización.
+            </p>
 
+            <div class="conectord">
+              <div class="circulod"></div>
+            </div>
+          </div>
           <div class="item der">
             <h4>Auxiliar Contable</h4>
             <span class="casa">Empresa de servicios contables</span>
@@ -211,7 +228,6 @@
               <div class="circulod"></div>
             </div>
           </div>
-
           <div class="item der">
             <h4>Técnico en mecánica general y electrónica automotriz</h4>
             <span class="casa">Taller mecánico</span>
@@ -219,16 +235,6 @@
             <p>Encargado de mantenimiento automotriz, con experiencia en diagnóstico y reparación de sistemas
               electrónicos, escaneo con herramientas de diagnóstico, interpretación de códigos de error y solución de
               fallas eléctricas.</p>
-            <div class="conectord">
-              <div class="circulod"></div>
-            </div>
-          </div>
-          <div class="item der">
-            <h4>Auxiliar de Ventas</h4>
-            <span class="casa">DEMASA</span>
-            <span class="fecha">2012 - 2013</span>
-            <p>Colaboré en distribución y organización de productos a nivel nacional, desarrollando trabajo en equipo,
-              atención al cliente y logística operativa.</p>
             <div class="conectord">
               <div class="circulod"></div>
             </div>
@@ -242,29 +248,71 @@
   <section id="portfolio" class="portfolio">
     <div class="contenedor-seccion">
       <h2>Portafolio</h2>
-      <div class="galeria">
-        <div class="proyecto">
-          <img src="img/p1.png" alt="Directorio Empresarial" />
-          <div class="overlay">
-            <h3>Directorio Empresarial</h3>
-            <p>App de escritorio en Java Swing para centralizar y gestionar contactos de empresas. <a
-                href="https://github.com/Yadir0795/DirectorioEmpresarial" target="_blank"
-                style="color: #fff; text-decoration: underline;">Ver en GitHub</a></p>
+
+      <!-- Proyecto 1 -->
+      <article class="proyecto-horizontal">
+        <div class="proyecto-media">
+          <div class="slider">
+            <img src="img/p1.png" alt="Directorio Empresarial">
           </div>
         </div>
-        <div class="proyecto">
-          <img src="img/p2.png" alt="Proyecto 2" />
-          <div class="overlay">
-            <h3>LiterAlura</h3>
-            <p>App de consola en Java y Spring Boot para explorar, registrar y gestionar libros del 
-                mediante la API Gutendex. <a
-                href="https://github.com/Yadir0795/LiterAlura" target="_blank"
-                style="color: #fff; text-decoration: underline;">Ver en GitHub</a></p>
+
+        <div class="proyecto-info">
+          <h3>Directorio Empresarial</h3>
+          <p>
+            Aplicación de escritorio desarrollada en Java Swing para la gestión
+            y centralización de contactos empresariales.
+          </p>
+
+          <h4>Tecnologías</h4>
+          <div class="tech">
+            <span>Java</span>
+            <span>Swing</span>
+            <span>SQL</span>
+          </div>
+
+          <div class="proyecto-links">
+            <a href="https://github.com/Yadir0795/DirectorioEmpresarial" target="_blank">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
           </div>
         </div>
-      </div>
+      </article>
+
+      <!-- Proyecto 2 -->
+      <article class="proyecto-horizontal reverse">
+        <div class="proyecto-media">
+          <div class="slider">
+            <img src="img/p2.png" alt="LiterAlura">
+          </div>
+        </div>
+
+        <div class="proyecto-info">
+          <h3>LiterAlura</h3>
+          <p>
+            Aplicación de consola desarrollada con Java y Spring Boot que consume
+            la API Gutendex para explorar, registrar y gestionar libros.
+          </p>
+
+          <h4>Tecnologías</h4>
+          <div class="tech">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>JPA</span>
+            <span>API REST</span>
+          </div>
+
+          <div class="proyecto-links">
+            <a href="https://github.com/Yadir0795/LiterAlura" target="_blank">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </article>
+
     </div>
   </section>
+
 
   <!-- SECCIÓN CONTACTO -->
   <section id="contacto" class="contacto">
