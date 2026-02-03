@@ -14,23 +14,6 @@ function seleccionar() {
 }
 
 /* ============================= */
-/*   Animación habilidades       */
-/* ============================= */
-const observerSkills = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      document.querySelectorAll(".skill").forEach(skill => {
-        const porcentaje = skill.getAttribute("data-skill");
-        skill.querySelector(".progreso").style.width = porcentaje + "%";
-      });
-    }
-  });
-}, { threshold: 0.3 });
-
-const skillsSection = document.getElementById("skills");
-if (skillsSection) observerSkills.observe(skillsSection);
-
-/* ============================= */
 /*   Animación portafolio        */
 /* ============================= */
 const proyectos = document.querySelectorAll(".proyecto-horizontal");
